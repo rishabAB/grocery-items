@@ -1,0 +1,89 @@
+html body .add-items{
+    text-align: center;
+    /* color: lightskyblue; */
+    /* border: 2px solid black; */
+    padding: 2rem;
+    border-radius: 40px;
+    margin-top: 8rem;
+    box-shadow: 2px 1px 19px 7px seagreen;
+    background-color: white;
+
+    
+}
+
+html body .add-items h1{
+    font-family: serif;
+}
+html body{
+    display: grid;
+    grid-template-columns: 50%;
+    justify-content: center;
+    background-color: #2e5d683d;
+    /* background-color: #c9b7e9; */
+}
+html body #input-box{
+    /* padding: 0 2rem; */
+    text-align: center;
+    outline: none;
+    border: none;
+    border: 2px solid #0f76e4a8;
+    margin-top: 6vh;
+}
+
+html body #mylist .grocery-item{
+  display: flex;
+  justify-content: space-between;
+    margin-top: 0.5em;
+    font-size: 22px;
+    font-family: cursive;
+}
+
+/* html body #mylist p{
+    border-radius: 10px;
+} */
+html body .fixed{
+    /* background-color: aqua; */
+    /* position: absolute; */
+    cursor: pointer;
+    margin: 7vh 1vh;
+    margin-left: -3vh;
+    border: none;
+    border-radius: 19%;
+    color: #e01449;
+    font-family: monospace;
+    /* position: fixed; */
+    
+
+}
+
+html body #mylist li{
+    list-style: none;
+    margin-right: 34vh;
+    margin-top: 0.5rem;
+}
+html body #mylist .fa-trash{
+    cursor: pointer;
+}
+   
+
+
+html body .btn-list{
+    border: none;
+    outline: none;
+    background-color: #1089e3;
+    color: #1f0d1f;
+    font-weight: 700;
+    border-radius: 7%;
+    border: 1;
+    cursor: pointer;
+}
+
+body #mylist li .removing{
+    color: chocolate;
+    background-color: grey;
+    /* display: inline-block; */
+} 
+
+
+
+ 
