@@ -3,6 +3,8 @@
 HTML, CSS, and JavaScript Based: The project is built entirely using HTML, CSS, and JavaScript, making it 
 lightweight and easy to deploy without any server-side dependencies.
 
+HERE'S THE PROJECT LINK  https://rishabab.github.io/grocery-items/
+
 1.Grocery Item Management: Users can add, edit, and delete grocery items, providing a convenient way 
 to keep track of their shopping list.
 2.User-Friendly Interface: The interface is designed to be intuitive and easy to use, 
