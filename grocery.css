@@ -1,13 +1,23 @@
 html body .add-items{
     text-align: center;
-    padding: 2rem;
+    padding: 3rem 2rem;
     border-radius: 40px;
-    margin-top: 8rem;
+    /* margin-top: 8rem; */
     box-shadow: 2px 1px 19px 7px seagreen;
     background-color: white;
 
+    display: flex;
+    flex-direction: column;
+    gap: 0.9em;
+
 }
 
+.item_submit{
+    display: flex;
+    flex-direction: row;
+    gap: 4%;
+    justify-content: center;
+}
 html body .add-items h1{
     font-family: serif;
 }
@@ -16,13 +26,15 @@ html body{
     grid-template-columns: 50%;
     justify-content: center;
     background-color: #2e5d683d;
+    place-items: center;
+    height: 100vh;
 }
 html body #input-box{
     text-align: center;
     outline: none;
     border: none;
     border: 2px solid #0f76e4a8;
-    margin-top: 6vh;
+    /* margin-top: 6vh; */
 }
 
 html body #mylist .grocery-item{
@@ -36,8 +48,8 @@ html body #mylist .grocery-item{
 html body .fixed{
    
     cursor: pointer;
-    margin: 7vh 1vh;
-    margin-left: -3vh;
+    /* margin: 7vh 1vh; */
+    /* margin-left: -3vh; */
     border: none;
     border-radius: 19%;
     color: #e01449;
