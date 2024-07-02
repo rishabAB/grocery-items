@@ -195,7 +195,7 @@ function edit(){
         editornot=true;
 
         mybutton.innerText='Submit';
-        mybutton.style.color='blue';
+        // mybutton.style.color='blue';
 
         }
 
