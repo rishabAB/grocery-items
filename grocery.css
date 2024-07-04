@@ -53,9 +53,12 @@ html body .fixed{
     /* margin: 7vh 1vh; */
     /* margin-left: -3vh; */
     border: none;
-    border-radius: 19%;
+    border-radius: 1.3em;
     color: #e01449;
     font-family: monospace;
+    width: 30%;
+    margin: auto;
+
    
 }
 
