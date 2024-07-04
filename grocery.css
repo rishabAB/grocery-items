@@ -79,7 +79,12 @@ html body .btn-list{
     border-radius: 7%;
     border: 1;
     cursor: pointer;
+    transition: background-color 0.8s ease; /* Add transition property */
 }
+
+.btn-list:hover {
+    background-color: #479ddc;
+  }
 
 body #mylist li .removing{
     color: chocolate;
