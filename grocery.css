@@ -120,7 +120,7 @@ body #mylist li .removing{
     }
   }
 
-  @media (max-width: 350px ) {
+   @media (max-width: 550px ) {
     /* CSS rules */
     .item_submit{
         font-size: 0.8rem;
