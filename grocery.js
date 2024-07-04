@@ -112,6 +112,7 @@ else{
     let mytxt = document.createElement('div');
     mytxt.classList.add('addany');
     mytxt.innerText = txt;
+    mytxt.style.color="#e01449";
   
     li.appendChild(mytxt);
     setTimeout(function(){
