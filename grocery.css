@@ -91,6 +91,7 @@ body #mylist li .removing{
     /* CSS rules */
     html body{
         grid-template-columns: 70%;
+        height: 90vh;
     }
   }
 
@@ -98,8 +99,19 @@ body #mylist li .removing{
     /* CSS rules */
     html body{
         grid-template-columns: 75%;
+        height: 83vh;
+        scroll-behavior: unset;
     }
   }
+  @media (max-width: 400px ) {
+    /* CSS rules */
+    html body{
+      
+        height: 83vh;
+        scroll-behavior: unset;
+    }
+  }
+
 
   @media (max-width: 400px ) and (min-width: 280px) {
     /* CSS rules */
