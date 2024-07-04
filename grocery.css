@@ -9,6 +9,7 @@ html body .add-items{
     display: flex;
     flex-direction: column;
     gap: 0.9em;
+    width: 100%;
 
 }
 
@@ -28,6 +29,7 @@ html body{
     background-color: #2e5d683d;
     place-items: center;
     height: 100vh;
+    grid-template-columns: 60%;
 }
 html body #input-box{
     text-align: center;
@@ -84,6 +86,42 @@ body #mylist li .removing{
     background-color: grey;
 } 
 
+
+@media (min-width: 500px) and (max-width: 650px ) {
+    /* CSS rules */
+    html body{
+        grid-template-columns: 70%;
+    }
+  }
+
+  @media (min-width: 400px) and (max-width: 501px ) {
+    /* CSS rules */
+    html body{
+        grid-template-columns: 75%;
+    }
+  }
+
+  @media (max-width: 400px ) and (min-width: 280px) {
+    /* CSS rules */
+    html body{
+        grid-template-columns: 82%;
+    }
+  }
+
+  @media (max-width: 350px ) {
+    /* CSS rules */
+    .item_submit{
+        font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 280px ) {
+    /* CSS rules */
+    html body{
+        grid-template-columns: 95%;
+    }
+  }
+  
 
 
  
