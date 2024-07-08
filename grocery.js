@@ -3,33 +3,15 @@ var mybutton=document.querySelector(".btn-list");
 const li=document.getElementById("mylist");
 
 var clear_items=document.querySelector(".fixed");
-var arr=[]; 
-var count=0;
-var v=false;
 
+var isCreateNew=true;
+let tochange = "";
 
-var editornot=true;
-
-function myfun(){
-
-    if(inputText.value!=""){
-      
-        arr.push(inputText.value);
-        let parent = document.createElement('div');
-        parent.classList.add('grocery-item');
-       
-        count+=1;
-        
-        parent.innerHTML=inputText.value;
-       
-        li.appendChild(myli);
-       
-        }   
-    }
+var isEdit=true;
 
     
 function createItem(){
-    if(inputText.value!="" && v === false ){
+    if(inputText.value!="" && isCreateNew ){
     let parent = document.createElement('div');
         parent.classList.add('grocery-item');
         var value=inputText.value;
@@ -39,34 +21,33 @@ function createItem(){
      <i class="fa-solid fa-trash"  style ="cursor:pointer" onclick="del()"></i> 
      </div>` ;
 
-     let hd=`${value} has been added to your list`;
+     let added_Value_Text=`${value} has been added to your list`;
  
      
      li.appendChild(parent);
      inputText.value="";
 
-     addCss(hd);
+     addCss(added_Value_Text);
     }
     
-    else if(v===true)
+    else if(!isCreateNew)
     {
         
         document.querySelector(".fa-pen-to-square").disabled = false;
         document.querySelector(".fa-trash").disabled=false;
         clear_items.disabled=false;
-        v=false;
+        isCreateNew=true;
         edit();
        
     }
     
-
 }
 
-function addCss(text){
+function addCss(deleted_Item_Text){
    
     let mytxt = document.createElement('div');
     mytxt.classList.add('success');
-    mytxt.innerText = text;
+    mytxt.innerText = deleted_Item_Text;
     mytxt.style.color='#31d615';
    
 
@@ -91,10 +72,10 @@ function removeItems(){
             li.removeChild(element);
         })
 
-        let text="All Items have been deleted"
+        let deleted_Item_Text="All Items have been deleted";
         let mytxt = document.createElement('div');
          mytxt.classList.add('success');
-        mytxt.innerText = text;
+        mytxt.innerText = deleted_Item_Text;
         mytxt.style.margin="20px";
         mytxt.style.color='#31d615';
            
@@ -132,11 +113,11 @@ function del(){
    
     let delt = window.event.target.parentElement.parentElement;
   
-    let myv=delt.innerText;
+    let deleted_Item_Text=delt.innerText;
     li.removeChild(delt);
    
-    let display=`${myv} has been removed from the list`;
-    remove_Css(display);
+    let removed_Item_Text=`${deleted_Item_Text} has been removed from the list`;
+    remove_Css(removed_Item_Text);
     if(mybutton.innerText=='Edit')
     mybutton.innerText='Submit';
 
@@ -144,11 +125,11 @@ function del(){
 }
 
 
-function remove_Css(text){
+function remove_Css(deleted_Item_Text){
 
     let mytxt = document.createElement('div');
     mytxt.classList.add('removing');
-    mytxt.innerText = text;
+    mytxt.innerText = deleted_Item_Text;
     
     mytxt.style.color='#ee5564';
    
@@ -161,19 +142,19 @@ function remove_Css(text){
 
 }
 
-let tochange = "";
+
 function edit(){
     
-    if(editornot === true)
+    if(isEdit === true)
     {
         tochange=window.event.target.parentElement.parentElement;
         
         tochange.style.opacity='0.40';
         
         inputText.value=tochange.innerText;
-        v=true;
+        isCreateNew=false;
 
-        editornot=false;
+        isEdit=false;
 
         document.querySelector(".fa-pen-to-square").disabled = true;
         document.querySelector(".fa-trash").disabled=true;
@@ -182,7 +163,6 @@ function edit(){
 
     }
     else{
-        
         if(document.querySelector(".fa-pen-to-square").disabled != true){
            
         tochange.innerHTML=`<span>${inputText.value}</span> <div class="btn-container">
@@ -193,11 +173,10 @@ function edit(){
         tochange.style.cursor='pointer';
         inputText.value="";
      
-        editornot=true;
+        isEdit=true;
 
         mybutton.innerText='Submit';
-        // mybutton.style.color='blue';
-
+       
         }
 
     }

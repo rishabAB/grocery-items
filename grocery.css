@@ -2,7 +2,6 @@ html body .add-items{
     text-align: center;
     padding: 3rem 2rem;
     border-radius: 40px;
-    /* margin-top: 8rem; */
     box-shadow: 2px 1px 19px 7px seagreen;
     background-color: white;
 
@@ -36,7 +35,7 @@ html body #input-box{
     outline: none;
     border: none;
     border: 2px solid #0f76e4a8;
-    /* margin-top: 6vh; */
+   
 }
 
 html body #mylist .grocery-item{
@@ -50,13 +49,11 @@ html body #mylist .grocery-item{
 html body .fixed{
    
     cursor: pointer;
-    /* margin: 7vh 1vh; */
-    /* margin-left: -3vh; */
     border: none;
     border-radius: 1.3em;
     color: #e01449;
     font-family: monospace;
-    width: 30%;
+    width: 60%;
     margin: auto;
 
    
@@ -82,7 +79,7 @@ html body .btn-list{
     border-radius: 7%;
     border: 1;
     cursor: pointer;
-    transition: background-color 0.8s ease; /* Add transition property */
+    transition: background-color 0.8s ease; 
 }
 
 .btn-list:hover {
@@ -96,7 +93,6 @@ body #mylist li .removing{
 
 
 @media (min-width: 500px) and (max-width: 650px ) {
-    /* CSS rules */
     html body{
         grid-template-columns: 70%;
         height: 90vh;
@@ -104,7 +100,6 @@ body #mylist li .removing{
   }
 
   @media (min-width: 400px) and (max-width: 501px ) {
-    /* CSS rules */
     html body{
         grid-template-columns: 75%;
         height: 83vh;
@@ -112,7 +107,6 @@ body #mylist li .removing{
     }
   }
   @media (max-width: 400px ) {
-    /* CSS rules */
     html body{
       
         height: 83vh;
@@ -122,21 +116,18 @@ body #mylist li .removing{
 
 
   @media (max-width: 400px ) and (min-width: 280px) {
-    /* CSS rules */
     html body{
         grid-template-columns: 82%;
     }
   }
 
    @media (max-width: 550px ) {
-    /* CSS rules */
     .item_submit{
         font-size: 0.8rem;
     }
   }
 
   @media (max-width: 280px ) {
-    /* CSS rules */
     html body{
         grid-template-columns: 95%;
     }
