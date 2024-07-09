@@ -45,17 +45,17 @@ function createItem(){
 
 function addCss(deleted_Item_Text){
    
-    let mytxt = document.createElement('div');
-    mytxt.classList.add('success');
-    mytxt.innerText = deleted_Item_Text;
-    mytxt.style.color='#31d615';
+    let div_Element = document.createElement('div');
+    div_Element.classList.add('success');
+    div_Element.innerText = deleted_Item_Text;
+    div_Element.style.color='#31d615';
    
 
-    li.appendChild(mytxt);
+    li.appendChild(div_Element);
     setTimeout(function(){
-        li.removeChild(mytxt);
+        li.removeChild(div_Element);
 
-        mytxt.classList.remove('success');
+        div_Element.classList.remove('success');
     }, 2000)
    
     
@@ -65,6 +65,7 @@ function addCss(deleted_Item_Text){
 function removeItems(){
    
     let items = document.querySelectorAll('.grocery-item');
+    let div_Element = document.createElement('div');
     
     if(items.length > 0){
       
@@ -72,34 +73,33 @@ function removeItems(){
             li.removeChild(element);
         })
 
-        let deleted_Item_Text="All Items have been deleted";
-        let mytxt = document.createElement('div');
-         mytxt.classList.add('success');
-        mytxt.innerText = deleted_Item_Text;
-        mytxt.style.margin="20px";
-        mytxt.style.color='#31d615';
+        let deleted_Items_Text="All Items have been deleted";
+       
+        div_Element.classList.add('success');
+        div_Element.innerText = deleted_Items_Text;
+        div_Element.style.margin="20px";
+        div_Element.style.color='#31d615';
            
-        li.appendChild(mytxt);
+        li.appendChild(div_Element);
         setTimeout(function(){
-        li.removeChild(mytxt);
+        li.removeChild(div_Element);
         
-        mytxt.classList.remove('success');
+        div_Element.classList.remove('success');
             }, 2000)
              
 }
 else{
    
-    let txt=`Please add items in your list`;
-    let mytxt = document.createElement('div');
-    mytxt.classList.add('addany');
-    mytxt.innerText = txt;
-    mytxt.style.color="#e01449";
+    let add_Items_Text=`Please add items in your list`;
+    div_Element.classList.add('addany');
+    div_Element.innerText = add_Items_Text;
+    div_Element.style.color="#e01449";
   
-    li.appendChild(mytxt);
+    li.appendChild(div_Element);
     setTimeout(function(){
-        li.removeChild(mytxt);
+        li.removeChild(div_Element);
 
-        mytxt.classList.remove('addany');
+        div_Element.classList.remove('addany');
     }, 2000)
 }
 
@@ -127,17 +127,17 @@ function del(){
 
 function remove_Css(deleted_Item_Text){
 
-    let mytxt = document.createElement('div');
-    mytxt.classList.add('removing');
-    mytxt.innerText = deleted_Item_Text;
+    let div_Element = document.createElement('div');
+    div_Element.classList.add('removing');
+    div_Element.innerText = deleted_Item_Text;
     
-    mytxt.style.color='#ee5564';
+    div_Element.style.color='#ee5564';
    
-    li.appendChild(mytxt);
+    li.appendChild(div_Element);
     setTimeout(function(){
-        li.removeChild(mytxt);
+        li.removeChild(div_Element);
 
-        mytxt.classList.remove('removing');
+        div_Element.classList.remove('removing');
     }, 2000)
 
 }

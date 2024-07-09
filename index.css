@@ -53,7 +53,7 @@ html body .fixed{
     border-radius: 1.3em;
     color: #e01449;
     font-family: monospace;
-    width: 60%;
+    width: 30%;
     margin: auto;
 
    
@@ -90,6 +90,13 @@ body #mylist li .removing{
     color: chocolate;
     background-color: grey;
 } 
+
+@media (max-width:800px)
+{
+    html body .fixed{
+        width:60%;
+    }
+}
 
 
 @media (min-width: 500px) and (max-width: 650px ) {
